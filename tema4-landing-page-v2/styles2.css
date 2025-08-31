@@ -1,3 +1,18 @@
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+/* Navigation bar */
+
+.header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
 .logo-block {
     display: flex;
     height: 40px;
@@ -12,30 +27,20 @@
     margin-right: 18px;
 }
 
-body {
-    font-family: "Poppins", sans-serif;
-}
-
-.header {
-    display:flex;
-    justify-content: space-between;
-}
-
 .menu-block {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
-}
-
-.menu-block a {
-    margin-right: 20px;
+    margin-right: 18px;
 }
 
 .menu-list {
     /* justify-content: center; */
+    display: flex;
     align-items: center;
     text-decoration: none;
+    gap: 20px;
 }
 
 a {
@@ -106,17 +111,82 @@ a.tertiary {
     margin: 60px 154px 60px 60px;
 } 
 
-@media screen and (max-width: 1999px) {
+
+@media screen and (max-width: 1024px) {
+    .menu-list {
+        align-items: flex-start;
+    }
+
+    .menu-block {
+        align-content: flex-start;
+    }
+    
     .content {
-        margin: auto auto auto auto;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px;
+        justify-content: center;
     }
 
     .social-img {
-        height: auto;
-        max-width: 100%;
+        margin: 40px auto;  /* Center image */
+    }
+} 
+
+
+
+@media screen and (max-width: 768px) {
+    .logo-block 
+    .menu-list {
+        align-items: baseline;
+        padding: 20px;
     }
     
+    .menu-block {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .menu-list {
+        display: flex;
+        flex-direction: row;
+        padding-left: 20px;
+    }
+
+    .button-block {
+        display: block;
+        flex-direction: row;
+        align-content: flex-end;
+    }
+
+    .content {
+        flex-direction: column; /* stack image and text */
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    .social-img {
+        margin: 20px 0;       /* reset spacing */
+        max-width: 80%;       /* prevent image overflow */
+    }
     .body-copy {
-        min-width: 216px;
+        min-width: auto;      /* remove minimum width */
+        padding: 0 10px;      /* keep text from touching edges */
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .content {
+        flex-direction: column; /* stack image and text */
+        align-items: center;
+        text-align: center;
+    }
+    .social-img {
+        margin: 20px 0;       /* reset spacing */
+        max-width: 50%;       /* prevent image overflow */
+    }
+    .body-copy {
+        min-width: auto;      /* remove minimum width */
+        padding: 0 10px;      /* keep text from touching edges */
     }
 }

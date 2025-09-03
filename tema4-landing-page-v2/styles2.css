@@ -1,16 +1,13 @@
-
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
 }
 
-/* Navigation bar */
-
 .header {
-    display:flex;
-    justify-content: space-between;
+    display: flex;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px 30px;
+    flex-wrap: wrap; 
 }
 
 .logo-block {
@@ -20,27 +17,30 @@ body {
     font-size: 30px;
     font-weight: 700;
     color: #173A56;
-    margin-right: 40px;
+    margin-right: 50px;
 }
 
 .logo-block img {
     margin-right: 18px;
 }
 
-.menu-block {
+.nav-center {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    margin-right: 18px;
-}
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 50px;
+} 
 
 .menu-list {
-    /* justify-content: center; */
     display: flex;
     align-items: center;
-    text-decoration: none;
     gap: 20px;
+}
+
+.button-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 a {
@@ -48,12 +48,15 @@ a {
 }
 
 a.button {
+    display: flex;
+    box-sizing: border-box;
     padding: 8px 16px;
     border-radius: 4px;
     font-size: 16px;
     font-weight: 600;
     line-height: 100%;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     white-space: nowrap;
     cursor: pointer;
 }
@@ -72,7 +75,6 @@ a.secondary {
     height: 43px;
     min-width: 110px;
     color: #173A56;
-    margin-right: 25px;
 }
 
 a.tertiary {
@@ -82,6 +84,8 @@ a.tertiary {
     text-decoration: underline;
     font-weight: 700;
 }
+
+/* WELCOME PAGE HEADER */
 
 .title-xl {
     color: #22343D;
@@ -102,7 +106,6 @@ a.tertiary {
     flex-direction: row-reverse;
     align-items: center;
     margin-left: 154px;
-
 }
 
 .social-img {
@@ -111,82 +114,140 @@ a.tertiary {
     margin: 60px 154px 60px 60px;
 } 
 
+/* Media Queries for Responsiveness */
 
+/* For smaller desktops */
 @media screen and (max-width: 1024px) {
-    .menu-list {
-        align-items: flex-start;
-    }
-
-    .menu-block {
-        align-content: flex-start;
+    .header {
+        padding: 20px;
     }
     
     .content {
-        margin-left: 0;
-        margin-right: 0;
-        padding: 20px;
-        justify-content: center;
-    }
-
-    .social-img {
-        margin: 40px auto;  /* Center image */
-    }
-} 
-
-
-
-@media screen and (max-width: 768px) {
-    .logo-block 
-    .menu-list {
-        align-items: baseline;
-        padding: 20px;
+        margin-left: 80px; 
     }
     
-    .menu-block {
-        flex-direction: column;
-        padding: 16px;
+    .social-img {
+        margin: 60px 80px 60px 60px; 
+    }
+    
+    .title-xl {
+        font-size: 36px; 
+        line-height: 48px;
+    }
+}
+
+/* For tablets */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        gap: 20px; 
+    }
+    
+    .nav-center {
+        display: flex;
+        justify-content: right;
+        margin-right: 10px;
+    }
+    
+    .logo-block {
+        display: flex;
+        align-items: center;
     }
 
     .menu-list {
         display: flex;
-        flex-direction: row;
-        padding-left: 20px;
-    }
-
-    .button-block {
-        display: block;
-        flex-direction: row;
-        align-content: flex-end;
-    }
-
-    .content {
-        flex-direction: column; /* stack image and text */
         align-items: center;
-        text-align: center;
+        justify-content: right; 
+        flex-wrap: wrap;
+    }
+    
+    .button-block {
+        justify-content: right; 
+        width: 100%; 
+    }
+    
+    .content {
+        flex-direction: column; 
+        margin-left: 0; 
+        text-align: center; 
         padding: 20px;
     }
+    
     .social-img {
-        margin: 20px 0;       /* reset spacing */
-        max-width: 80%;       /* prevent image overflow */
+        margin: 40px 0; 
+        max-width: 80%;
     }
-    .body-copy {
-        min-width: auto;      /* remove minimum width */
-        padding: 0 10px;      /* keep text from touching edges */
+    
+    .title-xl {
+        font-size: 32px; 
+        line-height: 42px;
+    }
+    
+    .paragraph {
+        font-size: 16px; 
     }
 }
 
-@media screen and (min-width: 360px) {
-    .content {
-        flex-direction: column; /* stack image and text */
-        align-items: center;
-        text-align: center;
+/* For mobile devices */
+@media screen and (max-width: 665px) {
+    .logo-block {
+        align-self: flex-start;
     }
+    
+    .menu-list {
+        flex-direction: column; 
+        align-items: flex-end;
+        gap: 10px; 
+    }
+    
+    .button-block {
+        flex-direction: column; 
+        align-items: flex-end;
+        padding: 1s0px;
+        gap: 10px; 
+    }
+
+    .menu-list
+    .button-block {
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .title-xl {
+        font-size: 28px; 
+        line-height: 36px;
+    }
+    
+    .paragraph {
+        font-size: 15px; 
+        line-height: 24px;
+    }
+    
     .social-img {
-        margin: 20px 0;       /* reset spacing */
-        max-width: 50%;       /* prevent image overflow */
+        max-width: 90%;
+        margin: 30px 0; 
     }
-    .body-copy {
-        min-width: auto;      /* remove minimum width */
-        padding: 0 10px;      /* keep text from touching edges */
+}
+
+/* For mobile devices */
+@media screen and (max-width: 360px) {
+    .title-xl {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .paragraph {
+        font-size: 14px; 
+        line-height: 22px;
+    }
+    
+    .social-img {
+        max-width: 95%; 
+    }
+    
+    a.button {
+        padding: 6px 12px; 
+        font-size: 14px;
+        min-width: 90px; 
     }
 }

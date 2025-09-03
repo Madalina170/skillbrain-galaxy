@@ -1,13 +1,16 @@
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 .header {
     display: flex;
     align-items: center;
-    padding: 20px 30px;
+    /* padding: 20px 30px; */
     flex-wrap: wrap; 
+    padding-top: 20px;
 }
 
 .logo-block {
@@ -105,29 +108,33 @@ a.tertiary {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    margin-left: 154px;
+    /* margin-left: 154px; */
+    margin-top: 30px;
 }
 
 .social-img {
-    max-width: 100%;
+    width: 50%;
     height: auto;
-    margin: 60px 154px 60px 60px;
+    /* margin: 60px 154px 60px 60px; */
 } 
+
+section {
+}
 
 /* Media Queries for Responsiveness */
 
 /* For smaller desktops */
 @media screen and (max-width: 1024px) {
     .header {
-        padding: 20px;
+        /* padding: 20px; */
     }
     
     .content {
-        margin-left: 80px; 
+        /* margin-left: 80px;  */
     }
     
     .social-img {
-        margin: 60px 80px 60px 60px; 
+        /* margin: 60px 80px 60px 60px;  */
     }
     
     .title-xl {
@@ -141,6 +148,11 @@ a.tertiary {
     .header {
         flex-direction: row;
         gap: 20px; 
+    }
+
+    body {
+        margin-left: 40px;
+        margin-right: 40px;
     }
     
     .nav-center {
@@ -174,7 +186,7 @@ a.tertiary {
     }
     
     .social-img {
-        margin: 40px 0; 
+        /* margin: 40px 0;  */
         max-width: 80%;
     }
     
@@ -227,6 +239,11 @@ a.tertiary {
         max-width: 90%;
         margin: 30px 0; 
     }
+
+    body {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
 
 /* For mobile devices */
@@ -249,5 +266,10 @@ a.tertiary {
         padding: 6px 12px; 
         font-size: 14px;
         min-width: 90px; 
+    }
+
+    body {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }

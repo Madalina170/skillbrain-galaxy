@@ -1,13 +1,15 @@
 body {
     font-family: "Poppins", sans-serif;
-    margin: 0;
+    padding-left: 140px;
+    padding-right: 140px;
 }
 
 .header {
     display: flex;
     align-items: center;
-    padding: 20px 30px;
+    /* padding: 20px 30px; */
     flex-wrap: wrap; 
+    padding-top: 20px;
 }
 
 .logo-block {
@@ -59,6 +61,7 @@ a.button {
     align-items: center;
     white-space: nowrap;
     cursor: pointer;
+    max-width: 200px;
 }
 
 a.primary {
@@ -85,6 +88,18 @@ a.tertiary {
     font-weight: 700;
 }
 
+.body-copy > a {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+.content {
+    gap: 70px;
+}
+
 /* WELCOME PAGE HEADER */
 
 .title-xl {
@@ -105,42 +120,149 @@ a.tertiary {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    margin-left: 154px;
+    margin-top: 30px;
 }
 
 .social-img {
-    max-width: 100%;
+    width: 50%;
     height: auto;
-    margin: 60px 154px 60px 60px;
 } 
+
+.centered-content {
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    text-align: center;
+    text-align: center;
+}
+
+.centered-content {
+    padding-top: 70px;
+    text-align: center;
+}
+
+section.centered-content > div {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    padding-top: 50px;
+}
+
+section.centered-content > a {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 50px;
+}
+
+.semicircle {
+    background-image: url(assets/semicircle.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.text-left,
+.text-right {
+    padding-top: 70px;
+    display: flex;
+    gap: 50px;
+}
+
+.text-left,
+.text-right > img {
+    height: auto;
+}
+
+.text-right {
+    flex-direction: row-reverse;
+}
 
 /* Media Queries for Responsiveness */
 
 /* For smaller desktops */
 @media screen and (max-width: 1024px) {
     .header {
-        padding: 20px;
+        /* padding: 20px; */
     }
     
-    .content {
-        margin-left: 80px; 
+    body {
+        padding-left: 50px;
+        padding-right: 50px;
     }
     
     .social-img {
-        margin: 60px 80px 60px 60px; 
+        /* margin: 60px 80px 60px 60px; */
+        width: 50%;
     }
     
     .title-xl {
-        font-size: 36px; 
-        line-height: 48px;
+        font-size: 40px;
+        line-height: 60px;
+    }
+    
+    .paragraph {
+        font-size: 18px; 
+        line-height: 28px;
+    }
+
+    .content {
+        gap: 50px;
+    }
+    
+    .centered-content {
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+        text-align: center;
+        text-align: center;
+    }
+    
+    section.centered-content > div {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    section.centered-content > a {
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    #semicircle {
+        background-image: url(assets/semicircle.svg);
+        background-size: cover;
+        background-position: center;
+        padding: 0;
+    }
+
+    .text-left,
+    .text-right {
+        padding-top: 100px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .text-left,
+    .text-right > .img-middle {
+        width: 100%;
+    }
+
+    .text-right {
+        flex-direction: row-reverse;
     }
 }
 
 /* For tablets */
-@media screen and (max-width: 768px) {
+@media (min-width: 425px) and (max-width: 768px) {
+    body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
     .header {
         flex-direction: row;
-        gap: 20px; 
+        gap: 20px;
     }
     
     .nav-center {
@@ -153,7 +275,7 @@ a.tertiary {
         display: flex;
         align-items: center;
     }
-
+    
     .menu-list {
         display: flex;
         align-items: center;
@@ -162,92 +284,186 @@ a.tertiary {
     }
     
     .button-block {
-        justify-content: right; 
         width: 100%; 
     }
     
     .content {
-        flex-direction: column; 
-        margin-left: 0; 
-        text-align: center; 
-        padding: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     
+    .body-copy {
+        width: 50%;
+    } 
+    
     .social-img {
-        margin: 40px 0; 
-        max-width: 80%;
+        width: 50%;
     }
     
     .title-xl {
-        font-size: 32px; 
-        line-height: 42px;
+        font-size: 36px;
+        line-height: 60px;
     }
     
     .paragraph {
-        font-size: 16px; 
-    }
-}
-
-/* For mobile devices */
-@media screen and (max-width: 665px) {
-    .logo-block {
-        align-self: flex-start;
+        font-size: 18px; 
+        line-height: 28px;
     }
     
-    .menu-list {
-        flex-direction: column; 
-        align-items: flex-end;
-        gap: 10px; 
+    .centered-content {
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+        text-align: center;
+        text-align: center;
     }
     
-    .button-block {
-        flex-direction: column; 
-        align-items: flex-end;
-        padding: 1s0px;
-        gap: 10px; 
+    .centered-content {
+        padding-top: 70px;
+        text-align: center;
+    }
+    
+    section.centered-content > div {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
     }
 
-    .menu-list
-    .button-block {
+    section.centered-content > a {
+        align-items: center;
         justify-content: center;
         align-content: center;
     }
-    
-    .title-xl {
-        font-size: 28px; 
-        line-height: 36px;
+
+    #semicircle {
+        background-image: url(assets/semicircle.svg);
+        background-size: cover;
+        background-position: center;
+        padding: 0;
     }
     
-    .paragraph {
-        font-size: 15px; 
-        line-height: 24px;
+    .subhead-1 {
+        color: #22343D;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 100%;
     }
-    
-    .social-img {
-        max-width: 90%;
-        margin: 30px 0; 
+
+    .text-left,
+    .text-right {
+        padding-top: 50px;
     }
+
 }
 
+
 /* For mobile devices */
-@media screen and (max-width: 360px) {
+@media (min-width: 320px) and (max-width: 424px) {
+    body {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    
+    .header > .button-block {
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-block {
+        margin-right: 0;
+    }
+    
+    .menu-list {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .body-copy{
+        width: 100%;
+    }
+
+    .content {
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    } 
+
     .title-xl {
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 36px;
+        line-height: 60px;
     }
     
     .paragraph {
-        font-size: 14px; 
-        line-height: 22px;
+        font-size: 18px; 
+        line-height: 28px;
     }
     
     .social-img {
-        max-width: 95%; 
+        width: 100%; 
     }
     
-    a.button {
-        padding: 6px 12px; 
-        font-size: 14px;
-        min-width: 90px; 
+    .body-copy > .button-block {
+        /*padding: 6px 12px; */
+        font-size: 10px;
+        min-width: 110px; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*.title-l {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    } */
+    
+    .centered-content {
+        padding-top: 50px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .img-middle {
+        width: 100%;
+    }
+
+    .semicircle {
+        background-image: url(assets/semicircle.svg);
+        background-size: cover;
+        background-position: center;
+        padding: 0;
+    }
+    
+    .subhead-1 {
+        color: #22343D;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 100%;
+    }
+
+    .icon-p > img {
+        width: 15%;
+        flex-direction: row;
+        display: inline;
+    }
+    
+    .text-left,
+    .text-right {
+        padding-top: 50px;
     }
 }

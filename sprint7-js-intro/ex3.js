@@ -1,28 +1,29 @@
 function zileleSaptamanii (nr) {
-    let ziua
+    let ziua;
     switch (nr) {
         case 0:
-            ziua: "Duminica";
-            break
+            ziua = "Duminica";
+            break;
         case 1:
-            ziua: "Luni";
-            break 
+            ziua = "Luni";
+            break; 
         case 2:
-            ziua: "Marti";
-            break
+            ziua = "Marti";
+            break;
         case 3:
-            ziua: "Miercuri";
-            break
+            ziua = "Miercuri";
+            break;
         case 4:
-            ziua: "Joi";
-            break
+            ziua = "Joi";
+            break;
         case 5:
-            ziua: "Vineri";
-            break
+            ziua = "Vineri";
+            break;
         case 6:
-            ziua: "Sambata";
-            break
+            ziua = "Sambata";
+            break;
         }
+        return ziua;
 }
 
 console.log(zileleSaptamanii(3))

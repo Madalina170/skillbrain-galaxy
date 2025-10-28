@@ -1,0 +1,74 @@
+.number-text,
+.advice-text {
+  font-family: 'StratosWeb-Regular', cursive;
+  /*font-weight: 400;*/
+  /*line-height: 100%;*/
+  text-align: center;
+}
+
+.number-text {
+  color: #53FFAB;
+  font-size: 15px;
+  letter-spacing: 40%;
+  text-transform: uppercase;
+}
+
+.advice-text {
+  color: #FFFFFF;
+  font-size: 30px;
+}
+
+.rectangle {
+  max-width: 60%;
+  max-height: auto;
+  background-color: #313A49;
+  border-radius: 16px;
+  padding: 16px 16px 50px 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rectangle div {
+  position: absolute;
+  bottom: -32.5px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 65px;
+}
+
+
+/*Background*/
+.background {
+  background: #202632;
+}
+
+/*Button*/
+.button-circle {
+  width: 65px;
+  height: 65px;
+  background-color: #53FFAB;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.button-icon img {
+  width: 28px;
+  height: 28px;
+}
+
+#onButtonGetAdvice {
+  cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+  .rectangle {
+    max-width: 90%;
+  }
+}

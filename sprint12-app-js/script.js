@@ -3,11 +3,14 @@ window.addEventListener('DOMContentLoaded', function() {
     const adviceButton = document.querySelector(".button-circle")
     adviceButton.addEventListener("click", onButtongetAdvice)
     
-    /*adviceButton.addEventListener('click', () => {
-      adviceButton.style.backgroundColor = "#c7964cff";
-      setTimeout(() => {
-        adviceButton.style.backgroundColor = "#53ffab";
-      }, 200);*/
+    const colorChange = document.querySelector(".button-circle")
+      colorChange.addEventListener('mouseenter', () => {
+        colorChange.style.backgroundColor = "#20FF92";
+      });
+
+      colorChange.addEventListener('mouseleave', () => {
+        colorChange.style.backgroundColor = "";
+        });
     });
   
   
